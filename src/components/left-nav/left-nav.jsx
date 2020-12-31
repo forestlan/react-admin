@@ -71,10 +71,11 @@ class LeftNav extends Component {
      }
      render() {
          let path = this.props.location.pathname
-         if (path.indexOf('/product')===0) {
-            //  表示当前请求的路径为/product或product的子路由
-             path='/product'
-         }
+         console.log(path);
+        //  if (path.indexOf('/product')===0) {
+        //     //  表示当前请求的路径为/product或product的子路由
+        //      path='/product'
+        //  }
          const openKey = this.openKey
         return (
             
