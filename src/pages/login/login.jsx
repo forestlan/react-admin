@@ -1,6 +1,6 @@
 /*用户登陆的路由组件 */
 import React, { Component } from 'react'
-import { Form, Input, Button, message } from 'antd';
+import { Form, Input, Button } from 'antd';
 import { connect } from 'react-redux'
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { Redirect } from 'react-router-dom'
@@ -10,11 +10,11 @@ import logo from '../../assets/images/logo.png'
 import { login } from "../../redux/actions";
 
 
- class Login extends Component {
+class Login extends Component {
 
     onFinish = async (values) => {
         const { username, password } = values
-       
+
 
         // 使用redux管理
         this.props.login(username, password)
@@ -33,7 +33,7 @@ import { login } from "../../redux/actions";
             <div className='login'>
                 <div className="login-header">
                     <img src={logo} alt="logo" />
-                    <h1>硅谷后台管理系统</h1>
+                    <h1>后台管理系统</h1>
                 </div>
                 <div className="form-outer">
                     <h2>用户登录</h2>
@@ -70,5 +70,5 @@ import { login } from "../../redux/actions";
 }
 export default connect(
     state => ({ user: state.user }),
-    {login}
+    { login }
 )(Login) 
